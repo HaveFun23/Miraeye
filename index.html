@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container_headIn">
+        <div class="logos">
+          <div class="main_logo">
+            <img src="./img/logo.webp" alt="logo" />
+          </div>
+          <div class="logo_text">
+            <img src="./img/logo_text.webp" alt="miraeye" />
+          </div>
+        </div>
+        <nav class="nav liquid">
+          <a href="#services" data-i18n="nav_services">Услуги</a>
+          <a href="#how" data-i18n="nav_how">Как начать</a>
+          <a href="#cases" data-i18n="nav_cases">Кейсы</a>
+          <a href="#consult" data-i18n="nav_consult">Консультация</a>
+        </nav>
+        <div class="lang">
+          <button data-lang="ru" class="active">RU</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="preview">
+        <div class="prev in">
+          <div class="prev_text">
+            <h1>Остановите конкурентов, ворующих ваш трафик</h1>
+            <h3>
+              Мы убираем недобросовестных конкурентов, использующих ваши
+              брендовые ключи в Google.
+            </h3>
+          </div>
+          <div class="but_contacts">
+            <button>Получить аудит</button>
+            <button>Написать в TG</button>
+          </div>
+        </div>
+      </section>
+      <section id="services">
+        <div class="services in">
+          <h2>Услуги</h2>
+          <div class="services_samples">
+            <div>
+              Защита бренда под ключ — поиск и уничтожение конкурентов по всем
+              направлениям для наилучшего результата
+            </div>
+            <div>
+              Сопровождение на определенных гео — защищаем вас от конкурентов в
+              определенных странах
+            </div>
+            <div>
+              Анализ брендового трафика для понимания стратегии борьбы с
+              недобросовестными конкурентами
+            </div>
+            <div>Консультации, касающиеся брендового трафика</div>
+          </div>
+        </div>
+      </section>
+      <section id="how_to_start">
+        <div class="how_form in">
+          <div class="steps">
+            <h2>Как начать</h2>
+            <p>Шаг 1: оставьте заявку — укажите, где удобнее связаться.</p>
+            <p>
+              Шаг 2: мы проведём экспресс-анализ бренда и конкурентной среды.
+            </p>
+            <p>Шаг 3: согласуем стратегию подавления и план действий.</p>
+            <p>Шаг 4: приступаем, уничтожаем недобросовестных конкурентов.</p>
+          </div>
+          <form data-form="contact">
+            <h3 data-i18n="form_title">Свяжемся с вами</h3>
+            <label>
+              <span data-i18n="form_name">Имя</span>
+              <input name="name" required />
+            </label>
+            <label>
+              <span data-i18n="form_prefer">Где удобнее общаться</span>
+              <select name="channel" required>
+                <option value="tg">Telegram</option>
+                <option value="wa">WhatsApp</option>
+                <option value="email">Email</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="form_contact">Контакт (ник/номер/email)</span>
+              <input name="contact" required />
+            </label>
+            <button class="but_send" type="submit" data-i18n="form_send">
+              Отправить
+            </button>
+            <div class="form__ok" hidden data-i18n="form_ok">
+              Заявка отправлена. Мы на связи!
+            </div>
+          </form>
+        </div>
+      </section>
+      <section id="cases">
+        <div class="cases in">
+          <div class="controls_cases">
+            <button class="arrow">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 19.9201L8.47997 13.4001C7.70997 12.6301 7.70997 11.3701 8.47997 10.6001L15 4.08008"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <p>Кейс 1</p>
+            <button class="arrow">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 19.9201L8.47997 13.4001C7.70997 12.6301 7.70997 11.3701 8.47997 10.6001L15 4.08008"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="main_card">
+            <h4>Рольф</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              molestie tellus ac ligula vulputate ullamcorper. Vivamus mollis
+              leo in orci suscipit ultricies. Quisque sed dictum nisl, vitae
+              lobortis ante. Nunc ac auctor neque. Quisque cursus enim lobortis
+              tortor convallis volutpat. Suspendisse ultrices, erat vel pharetra
+              sagittis, enim nunc viverra nibh, sit amet commodo ex tortor quis
+              felis. Morbi consequat semper mauris, eget efficitur libero ornare
+              in. Duis eu orci auctor, tempus tortor sit amet, finibus velit.
+              Phasellus in fringilla mauris, laoreet sodales felis. Sed ut odio
+              magna. Vestibulum ante ipsum primis in faucibus orci luctus et
+              ultrices posuere cubilia curae; Fusce eu mauris pellentesque,
+              elementum neque vel, egestas enim. Duis quis risus ac tortor
+              pellentesque ornare sit amet sed velit. Suspendisse ac scelerisque
+              dui, ac convallis nulla. Praesent est neque, scelerisque ut erat
+              lobortis, aliquet sollicitudin lectus. Maecenas non metus posuere,
+              interdum dui nec, faucibus metus.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <nav>
+        <div class="footer_links">
+          <a href="#">Главная</a>
+          <a href="#">Услуги</a>
+          <a href="#">Как начать</a>
+          <a href="#">Кейсы</a>
+        </div>
+        <div class="but_contacts">
+          <button>Написать в TG</button>
+          <button>Консультация</button>
+        </div>
+      </nav>
+    </footer>
+  </body>
+</html>
