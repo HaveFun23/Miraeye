@@ -266,6 +266,11 @@ nav a {
 }
 
 #preview {
+  background-color: #0f1217;
+}
+
+.all_inner {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,7 +278,12 @@ nav a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #0f1217;
+  z-index: 10;
+}
+
+.spotlight {
+  position: absolute;
+  z-index: -1;
 }
 
 .in {
@@ -448,6 +458,9 @@ form .but_send:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   -webkit-column-gap: 15px;
      -moz-column-gap: 15px;
           column-gap: 15px;
@@ -475,10 +488,20 @@ form .but_send:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 30px;
+}
+
+.main_case_part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
 }
 
 .main_card {
@@ -492,73 +515,20 @@ form .but_send:active {
   padding-top: 20px;
 }
 
-.cases {
-  background: linear-gradient(135deg, rgba(8, 20, 35, 0.95), rgba(12, 28, 50, 0.95));
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 40px;
-  position: relative;
-  overflow: hidden;
-}
-
-.cases::before {
-  content: "";
+.main_case_image {
   position: absolute;
-  top: 0;
   left: 0;
+  max-width: 35%;
+}
+
+.main_case_logo {
+  position: absolute;
   right: 0;
-  bottom: 0;
-  background: rgba(15, 35, 65, 0.6);
-  z-index: -1;
+  max-width: 30%;
 }
 
-.controls_cases {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 30px;
-  padding: 0 20px;
-}
-
-.controls_cases p {
-  color: white;
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0 20px;
-}
-
-.main_card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  padding: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.main_card h4 {
-  color: white;
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-
-.main_card p {
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.6;
-  font-size: 16px;
-}
-
-.cases.dark::before {
-  background: rgba(8, 20, 35, 0.7);
+#cases {
+  background-color: #0f1217;
 }
 
 footer {
