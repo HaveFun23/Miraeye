@@ -45,6 +45,9 @@ nav {
 .nav {
   display: flex;
   gap: 30px;
+  a:hover {
+    color: #88e7e7;
+  }
 }
 
 .nav a {
@@ -58,144 +61,6 @@ nav {
   transition: all 0.4s ease;
   background: linear-gradient(45deg, transparent, transparent);
   background-size: 200% 200%;
-}
-
-/* Анимация переливания при наведении */
-.nav a:hover {
-  color: #000;
-  background: linear-gradient(
-    45deg,
-    transparent 0%,
-    #88e7e7 25%,
-    #88e7e7 75%,
-    transparent 100%
-  );
-  background-size: 200% 200%;
-  animation: liquidFlow 0.6s ease-out;
-  box-shadow: 0 0 15px rgba(136, 231, 231, 0.4),
-    inset 0 0 10px rgba(136, 231, 231, 0.2);
-}
-
-/* Альтернативный вариант с более плавным переливом */
-.nav a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(136, 231, 231, 0.4),
-    transparent
-  );
-  transition: left 0.5s ease;
-}
-
-.nav a:hover::before {
-  left: 100%;
-}
-
-/* Ключевые кадры для анимации переливания */
-@keyframes liquidFlow {
-  0% {
-    background-position: -100% -100%;
-  }
-  50% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
-
-/* Дополнительный эффект с градиентной обводкой */
-.nav a::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 8px;
-  padding: 1px;
-  background: linear-gradient(45deg, transparent, #88e7e7, transparent);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: xor;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.nav a:hover::after {
-  opacity: 1;
-}
-
-/* Вариант с волнообразной анимацией */
-.nav.liquid a {
-  background: none;
-}
-
-.nav.liquid a:hover {
-  animation: waveFill 0.8s ease-out forwards;
-}
-
-@keyframes waveFill {
-  0% {
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      #88e7e7 0%,
-      transparent 0%
-    );
-    background-size: 200% 100%;
-    background-position: -100% 0;
-  }
-  50% {
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      #88e7e7 50%,
-      transparent 100%
-    );
-    background-size: 200% 100%;
-    background-position: 0% 0;
-  }
-  100% {
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      #88e7e7 100%,
-      transparent 100%
-    );
-    background-size: 200% 100%;
-    background-position: 100% 0;
-  }
-}
-
-/* Упрощенный вариант для лучшей производительности */
-.nav.simple a {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav.simple a:hover {
-  background-color: #88e7e7;
-  color: #000;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(136, 231, 231, 0.3);
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-  .nav {
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .nav a {
-    padding: 6px 12px;
-    font-size: 14px;
-  }
 }
 .lang {
   display: flex;
@@ -379,6 +244,7 @@ form {
   flex-direction: column;
   gap: 30px;
 }
+
 .main_case_part {
   display: flex;
   align-items: center;
@@ -427,8 +293,9 @@ form {
   max-width: 30%;
 }
 #cases {
-  background-color: #0f1217;
+  background-color: red;
 }
+
 footer {
   padding: 28px 0;
   background-color: #1f2730;
@@ -443,6 +310,9 @@ footer {
 .footer_links {
   display: flex;
   column-gap: 15px;
+  a:hover {
+    color: #88e7e7;
+  }
 }
 
 .but_contacts {

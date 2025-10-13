@@ -1,4 +1,6 @@
 let timer = 1;
+const colors = ["red", "orange", "green"];
+const case_area = document.querySelector("#cases");
 const caseCounter = document.querySelector(".case_counter");
 caseCounter.innerText = "Case 1";
 function changeTheCase(elem) {
@@ -68,4 +70,5 @@ function changeTheCase(elem) {
       break;
   }
   caseCounter.innerText = "Case " + timer;
+  case_area.style.backgroundColor = colors[timer - 1];
 }
