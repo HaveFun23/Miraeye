@@ -536,25 +536,31 @@ form .but_send:active {
           animation-name: case_card;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  -webkit-transform: translate(0, 10px);
-          transform: translate(0, 10px);
 }
 
 @-webkit-keyframes case_card {
   from {
     opacity: 0;
+    -webkit-transform: translate(0, -20px);
+            transform: translate(0, -20px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 }
 
 @keyframes case_card {
   from {
     opacity: 0;
+    -webkit-transform: translate(0, -20px);
+            transform: translate(0, -20px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 }
 .main_case_logo {

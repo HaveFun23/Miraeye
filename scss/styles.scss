@@ -410,14 +410,15 @@ form {
   display: none;
   animation-name: case_card;
   animation-duration: 1s;
-  transform: translate(0, 10px);
 }
 @keyframes case_card {
   from {
     opacity: 0;
+    transform: translate(0, -20px);
   }
   to {
     opacity: 1;
+    transform: translate(0, 0);
   }
 }
 .main_case_logo {
