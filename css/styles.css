@@ -505,7 +505,7 @@ form .but_send:active {
 }
 
 .main_card {
-  max-width: 500px;
+  max-width: 450px;
   text-align: center;
   background-color: #3d5a80;
   border-radius: 20px;
@@ -521,6 +521,42 @@ form .but_send:active {
   max-width: 35%;
 }
 
+#pic1,
+.main_card {
+  -webkit-animation-name: case_card;
+          animation-name: case_card;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+#pic2,
+#pic3 {
+  display: none;
+  -webkit-animation-name: case_card;
+          animation-name: case_card;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-transform: translate(0, 10px);
+          transform: translate(0, 10px);
+}
+
+@-webkit-keyframes case_card {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes case_card {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .main_case_logo {
   position: absolute;
   right: 0;

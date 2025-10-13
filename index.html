@@ -126,7 +126,7 @@
       <section id="cases">
         <div class="cases">
           <div class="controls_cases">
-            <button class="arrow">
+            <button class="arrow" data-dir="back" onclick="changeTheCase(this)">
               <svg
                 width="24"
                 height="24"
@@ -144,8 +144,8 @@
                 />
               </svg>
             </button>
-            <p>Кейс 1</p>
-            <button class="arrow">
+            <p class="case_counter"></p>
+            <button class="arrow" data-dir="forw" onclick="changeTheCase(this)">
               <svg
                 width="24"
                 height="24"
@@ -166,9 +166,11 @@
           </div>
           <div class="main_case_part">
             <div class="main_case_image">
-              <img src="./img/dom.png" alt="" />
+              <img src="./img/posrhe.png" alt="ROLF" id="pic1" />
+              <img src="./img/dom.png" alt="ПИК" id="pic2" />
+              <img src="./img/casino.png" alt="LiBet" id="pic3" />
             </div>
-            <div class="main_card">
+            <div class="main_card" id="pic1">
               <h4>Рольф</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
@@ -190,8 +192,56 @@
                 metus.
               </p>
             </div>
+            <div class="main_card" id="pic2">
+              <h4>ПИК</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                molestie tellus ac ligula vulputate ullamcorper. Vivamus mollis
+                leo in orci suscipit ultricies. Quisque sed dictum nisl, vitae
+                lobortis ante. Nunc ac auctor neque. Quisque cursus enim
+                lobortis tortor convallis volutpat. Suspendisse ultrices, erat
+                vel pharetra sagittis, enim nunc viverra nibh, sit amet commodo
+                ex tortor quis felis. Morbi consequat semper mauris, eget
+                efficitur libero ornare in. Duis eu orci auctor, tempus tortor
+                sit amet, finibus velit. Phasellus in fringilla mauris, laoreet
+                sodales felis. Sed ut odio magna. Vestibulum ante ipsum primis
+                in faucibus orci luctus et ultrices posuere cubilia curae; Fusce
+                eu mauris pellentesque, elementum neque vel, egestas enim. Duis
+                quis risus ac tortor pellentesque ornare sit amet sed velit.
+                Suspendisse ac scelerisque dui, ac convallis nulla. Praesent est
+                neque, scelerisque ut erat lobortis, aliquet sollicitudin
+                lectus. Maecenas non metus posuere, interdum dui nec, faucibus
+                metus.
+              </p>
+            </div>
+
+            <div class="main_card" id="pic3">
+              <h4>Libet</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                molestie tellus ac ligula vulputate ullamcorper. Vivamus mollis
+                leo in orci suscipit ultricies. Quisque sed dictum nisl, vitae
+                lobortis ante. Nunc ac auctor neque. Quisque cursus enim
+                lobortis tortor convallis volutpat. Suspendisse ultrices, erat
+                vel pharetra sagittis, enim nunc viverra nibh, sit amet commodo
+                ex tortor quis felis. Morbi consequat semper mauris, eget
+                efficitur libero ornare in. Duis eu orci auctor, tempus tortor
+                sit amet, finibus velit. Phasellus in fringilla mauris, laoreet
+                sodales felis. Sed ut odio magna. Vestibulum ante ipsum primis
+                in faucibus orci luctus et ultrices posuere cubilia curae; Fusce
+                eu mauris pellentesque, elementum neque vel, egestas enim. Duis
+                quis risus ac tortor pellentesque ornare sit amet sed velit.
+                Suspendisse ac scelerisque dui, ac convallis nulla. Praesent est
+                neque, scelerisque ut erat lobortis, aliquet sollicitudin
+                lectus. Maecenas non metus posuere, interdum dui nec, faucibus
+                metus.
+              </p>
+            </div>
+
             <div class="main_case_logo">
-              <img src="./img/pik.png" alt="" />
+              <img src="./img/rolf_logo.png" alt="" id="pic1" />
+              <img src="./img/pik.png" alt="" id="pic2" />
+              <img src="./img/rolf_logo.png" alt="" id="pic3" />
             </div>
           </div>
         </div>
@@ -214,4 +264,5 @@
     </footer>
   </body>
   <script src="./js/spotlight.js"></script>
+  <script src="./js/cases.js"></script>
 </html>

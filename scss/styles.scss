@@ -389,7 +389,7 @@ form {
   p {
     padding-top: 20px;
   }
-  max-width: 500px;
+  max-width: 450px;
   text-align: center;
   background-color: #3d5a80;
   border-radius: 20px;
@@ -399,6 +399,26 @@ form {
   position: absolute;
   left: 0;
   max-width: 35%;
+}
+#pic1,
+.main_card {
+  animation-name: case_card;
+  animation-duration: 2s;
+}
+#pic2,
+#pic3 {
+  display: none;
+  animation-name: case_card;
+  animation-duration: 1s;
+  transform: translate(0, 10px);
+}
+@keyframes case_card {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .main_case_logo {
   position: absolute;
