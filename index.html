@@ -11,7 +11,7 @@
     <header>
       <div class="container_headIn">
         <div class="logos">
-          <div class="main_logo">
+          <div id="logo-eye" class="main_logo">
             <img src="./img/logo.webp" alt="logo" />
           </div>
           <div class="logo_text">
@@ -32,38 +32,36 @@
       </div>
     </header>
     <main>
-      <section id="preview">
-        <div class="all_inner">
-          <div class="spotlight">
-            <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-              <g>
-                <ellipse
-                  ry="104"
-                  rx="104"
-                  id="svg_1"
-                  cy="284.04999"
-                  cx="410.49999"
-                  stroke-width="1.5"
-                  stroke="#ff6933"
-                  fill="#ff6933"
-                />
-              </g>
-            </svg>
-          </div>
-          <div class="prev in">
-            <div class="prev_text">
-              <h1 data-i18n="hero_h1a">
-                Остановите конкурентов, ворующих ваш трафик
-              </h1>
-              <h3 data-i18n="hero_sub">
-                Мы убираем недобросовестных конкурентов, использующих ваши
-                брендовые ключи в Google.
-              </h3>
-            </div>
-            <div class="but_contacts">
-              <button data-i18n="btn_audit">Получить аудит</button>
-              <button data-i18n="btn_tg">Написать в TG</button>
-            </div>
+      <section id="hero" class="hero">
+        <!-- Spotlight SVG lives only inside hero -->
+        <svg id="spotlight" class="spotlight" preserveAspectRatio="none"></svg>
+
+        <div class="container hero__content">
+          <h1 class="hero__title">
+            <span data-i18n="hero_h1a">Остановите конкурентов,</span><br />
+            <span data-i18n="hero_h1b">ворующих ваш трафик</span>
+          </h1>
+          <p class="hero__subtitle" data-i18n="hero_sub">
+            Мы убираем недобросовестных конкурентов, использующих ваши брендовые
+            ключи в Google.
+          </p>
+          <div class="hero__actions">
+            <button
+              class="btn btn--primary"
+              data-open="audit"
+              data-i18n="btn_audit"
+            >
+              Получить аудит
+            </button>
+            <a
+              class="btn btn--ghost"
+              id="tg-link"
+              href="https://t.me/username"
+              target="_blank"
+              rel="noreferrer"
+              data-i18n="btn_tg"
+              >Написать в TG</a
+            >
           </div>
         </div>
       </section>

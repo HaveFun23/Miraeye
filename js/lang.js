@@ -4,7 +4,8 @@ const I18N = {
     nav_how: "Как начать",
     nav_cases: "Кейсы",
     nav_hero: "Главная",
-    hero_h1a: "Остановите конкурентов, ворующих ваш трафик",
+    hero_h1a: "Остановите конкурентов,",
+    hero_h1b: "ворующих ваш трафик",
     hero_sub:
       "Мы убираем недобросовестных конкурентов, использующих ваши брендовые ключи в Google.",
     btn_audit: "Получить аудит",
@@ -77,7 +78,6 @@ const applyI18N = () => {
   document.documentElement.lang = LANG;
 };
 const btns = document.querySelectorAll("#lang_but");
-console.log(btns[0]);
 btns.forEach((btn) => {
   btn.addEventListener("click", () => {
     btns.forEach((el) => {
