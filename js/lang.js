@@ -38,7 +38,8 @@ const I18N = {
     nav_how: "How it works",
     nav_cases: "Cases",
     nav_hero: "Home",
-    hero_h1a: "Stop competitors stealing your traffic",
+    hero_h1a: "Stop competitors ",
+    hero_h1b: "stealing your traffic",
     hero_sub:
       "We remove unfair competitors abusing your branded keywords on Google.",
     btn_audit: "Get an audit",

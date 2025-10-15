@@ -49,15 +49,14 @@ header {
 .main_logo {
   width: 60px;
   height: 60px;
+  position: absolute;
+  top: 10px;
 }
 
 .logos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-column-gap: 20px;
-     -moz-column-gap: 20px;
-          column-gap: 20px;
+  text-align: end;
+  position: relative;
+  width: 20%;
 }
 
 nav {
@@ -130,6 +129,11 @@ h1 {
   font-weight: bold;
 }
 
+section {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
 .hero {
   position: relative;
   min-height: 88vh;
@@ -140,7 +144,8 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  padding: unset;
+  padding: 0;
+  margin-top: -40px;
 }
 
 .spotlight {
@@ -212,76 +217,18 @@ h1 {
           transform: translateY(-1px);
 }
 
-/* #preview {
-  background-color: #0f1217;
-}
-.all_inner {
-  position: relative;
-  display: flex;
-  min-height: 88vh;
-  align-items: center;
-  z-index: 10;
-}
-.spotlight {
-  position: absolute;
-  z-index: -1;
-}
-
-.in {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 18px;
-}
-.prev_text {
-  h1 {
-    font-size: 5vw;
-    font-weight: bold;
-    color: #3d5a80;
-  }
-  h3 {
-    color: #1b232d;
-    padding-bottom: 22px;
-  }
-}
-.but_contacts {
-  display: flex;
-  column-gap: 12px;
-  * {
-    font-weight: bold;
-    padding: 12px 18px;
-  }
-  :nth-child(1) {
-    background-color: #ff6933;
-    color: #293241;
-    border-radius: 14px;
-  }
-  :nth-child(2) {
-    color: #88e7e7;
-    border: currentColor 1px solid;
-    border-radius: 14px;
-  }
-} */
 .services h2 {
   font-size: 28px;
   font-weight: bold;
+  text-align: center;
+  padding-bottom: 15px;
 }
 
-.services_samples {
-  padding-top: 20px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 110px;
-  gap: 10px;
-  grid-auto-flow: row dense;
-}
-.services_samples div {
-  padding: 10px 20px;
+.svc {
+  padding: 20px 30px;
   background-color: #3d5a80;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
-  border-radius: 18px;
   border: #88e7e7 1px solid;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -290,23 +237,29 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
 }
-.services_samples div:nth-child(1) {
-  -ms-grid-column-span: 4;
-  grid-column: span 4;
+
+.svc_out {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.services_samples div:nth-child(2) {
-  -ms-grid-column-span: 2;
-  grid-column: span 2;
+
+#analis {
+  max-width: 50%;
 }
-.services_samples div:nth-child(3) {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 4;
-  grid-column: 3/span 4;
-}
-.services_samples div:last-child {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1/span 2;
+
+#geoAndAn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 50%;
 }
 
 .how_to_start h2 {
@@ -341,7 +294,6 @@ form {
   row-gap: 15px;
   background-color: #3d5a80;
   padding: 30px 18px;
-  border-radius: 18px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -453,7 +405,6 @@ form .but_send:active {
   width: 30vw;
   text-align: center;
   background-color: #3d5a80;
-  border-radius: 20px;
   padding: 20px 20px;
 }
 .main_card p {
@@ -598,6 +549,58 @@ footer nav {
 .but_contacts button.glow:hover {
   -webkit-animation: buttonGlow 1.5s ease-in-out infinite alternate;
           animation: buttonGlow 1.5s ease-in-out infinite alternate;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 80;
+}
+
+.popup {
+  border: 0;
+  border-radius: 20px;
+  padding: 0;
+  background: transparent;
+  z-index: 90;
+}
+
+.popup::-ms-backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.popup::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.popup .form {
+  width: min(520px, 92vw);
+  background: var(--blue);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.form label {
+  display: -ms-grid;
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.form input,
+.form select {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #223146;
+  color: #fff;
+}
+
+.form__ok {
+  margin-top: 10px;
+  color: #c0ffd6;
+  font-weight: 700;
 }
 
 @media (max-width: 980px) {

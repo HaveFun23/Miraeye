@@ -68,27 +68,33 @@
       <section id="services">
         <div class="services in">
           <h2 data-i18n="services_title">Услуги</h2>
-          <div class="services_samples">
-            <div data-i18n="svc_full">
+
+          <div class="svc_out">
+            <button class="svc" data-i18n="svc_full">
               <p>
                 Защита бренда под ключ — поиск и уничтожение конкурентов по всем
                 направлениям для наилучшего результата
               </p>
-            </div>
-            <div data-i18n="svc_geo">
-              <p>
-                Сопровождение на определенных гео — защищаем вас от конкурентов
-                в определенных странах
-              </p>
-            </div>
-            <div data-i18n="svc_analysis">
-              <p>
-                Анализ брендового трафика для понимания стратегии борьбы с
-                недобросовестными конкурентами
-              </p>
-            </div>
-            <div data-i18n="svc_consult">
-              <p>Консультации, касающиеся брендового трафика</p>
+            </button>
+            <div class="svc_out" id="geoAndAn">
+              <button data-i18n="svc_geo" class="svc" id="geo">
+                <p>
+                  Сопровождение на определенных гео — защищаем вас от
+                  конкурентов в определенных странах
+                </p>
+              </button>
+
+              <div class="svc_out">
+                <button data-i18n="svc_analysis" class="svc" id="analis">
+                  <p>
+                    Анализ брендового трафика для понимания стратегии борьбы с
+                    недобросовестными конкурентами
+                  </p>
+                </button>
+                <button data-i18n="svc_consult" class="svc">
+                  <p>Консультации, касающиеся брендового трафика</p>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -275,6 +281,73 @@
         </div>
       </nav>
     </footer>
+    <div id="popup-overlay" class="overlay" hidden></div>
+
+    <dialog id="popup-audit" class="popup">
+      <form method="dialog" class="form" data-form="audit">
+        <h3 data-i18n="audit_title">Получить аудит</h3>
+        <label>
+          <span data-i18n="form_name">Имя</span>
+          <input name="name" required />
+        </label>
+        <label>
+          <span data-i18n="form_prefer">Где удобнее общаться</span>
+          <select name="channel" required>
+            <option value="tg">Telegram</option>
+            <option value="wa">WhatsApp</option>
+            <option value="email">Email</option>
+          </select>
+        </label>
+        <label>
+          <span data-i18n="form_contact">Контакт (ник/номер/email)</span>
+          <input name="contact" required />
+        </label>
+        <menu>
+          <button class="btn" value="cancel" data-i18n="btn_cancel">
+            Отмена
+          </button>
+          <button class="btn btn--primary" value="submit" data-i18n="form_send">
+            Отправить
+          </button>
+        </menu>
+        <div class="form__ok" hidden data-i18n="form_ok">
+          Заявка отправлена. Мы на связи!
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="popup-service" class="popup">
+      <form method="dialog" class="form" data-form="service">
+        <h3 id="svc-title">Service</h3>
+        <label>
+          <span data-i18n="form_name">Имя</span>
+          <input name="name" required />
+        </label>
+        <label>
+          <span data-i18n="form_prefer">Где удобнее общаться</span>
+          <select name="channel" required>
+            <option value="tg">Telegram</option>
+            <option value="wa">WhatsApp</option>
+            <option value="email">Email</option>
+          </select>
+        </label>
+        <label>
+          <span data-i18n="form_contact">Контакт (ник/номер/email)</span>
+          <input name="contact" required />
+        </label>
+        <menu>
+          <button class="btn" value="cancel" data-i18n="btn_cancel">
+            Отмена
+          </button>
+          <button class="btn btn--primary" value="submit" data-i18n="form_send">
+            Отправить
+          </button>
+        </menu>
+        <div class="form__ok" hidden data-i18n="form_ok">
+          Заявка отправлена. Мы на связи!
+        </div>
+      </form>
+    </dialog>
   </body>
   <script src="./js/spotlight.js"></script>
   <script src="./js/cases.js"></script>
