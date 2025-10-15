@@ -231,6 +231,7 @@ section {
   display: -ms-flexbox;
   display: flex;
   height: 30vw;
+  max-height: 500px;
 }
 
 .svc {
