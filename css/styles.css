@@ -230,7 +230,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 90vh;
+  height: 30vw;
 }
 
 .svc {
@@ -632,7 +632,7 @@ footer nav {
 }
 @media (max-width: 900px) {
   .svc_main_out {
-    height: 70vh;
+    height: 40vw;
     font-size: 12px;
   }
 }
@@ -645,16 +645,17 @@ footer nav {
   }
 }
 @media (max-width: 750px) {
-  #analis p {
-    max-width: 100px;
-  }
-}
-@media (max-width: 700px) {
   #analis {
     width: 60%;
   }
+  #analis p {
+    max-width: 100px;
+  }
   #consult {
     width: 40%;
+  }
+  section {
+    padding: 30px;
   }
 }
 @media (max-width: 650px) {
@@ -687,9 +688,6 @@ footer nav {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  section {
-    padding: 30px;
-  }
   #secure {
     width: 30%;
   }
@@ -706,6 +704,7 @@ footer nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 65vw;
   }
   #secure {
     width: unset;

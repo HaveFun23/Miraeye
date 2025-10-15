@@ -130,7 +130,7 @@ rebuildDefs();
 resizeSVG();
 updateEyeCenter();
 window.addEventListener("resize", () => {
-  if (document.documentElement.clientWidth > 900) {
+  if (document.documentElement.clientWidth > 950) {
     resizeSVG();
     updateEyeCenter();
   }
