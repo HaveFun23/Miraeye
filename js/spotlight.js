@@ -130,15 +130,21 @@ rebuildDefs();
 resizeSVG();
 updateEyeCenter();
 window.addEventListener("resize", () => {
-  resizeSVG();
-  updateEyeCenter();
+  if (document.documentElement.clientWidth > 900) {
+    resizeSVG();
+    updateEyeCenter();
+  }
 });
 
 hero.addEventListener("mousemove", (e) => {
-  updateBeam(e.clientX, e.clientY);
+  if (document.documentElement.clientWidth > 900) {
+    updateBeam(e.clientX, e.clientY);
+  }
 });
 // default beam position center
 (() => {
-  const r = hero.getBoundingClientRect();
-  updateBeam(r.left + r.width * 0.62, r.top + r.height * 0.42);
+  if (document.documentElement.clientWidth > 500) {
+    const r = hero.getBoundingClientRect();
+    updateBeam(r.left + r.width * 0.62, r.top + r.height * 0.42);
+  }
 })();

@@ -146,6 +146,8 @@ section {
   overflow: hidden;
   padding: 0;
   margin-top: -40px;
+  width: 100%;
+  max-width: unset;
 }
 
 .spotlight {
@@ -224,18 +226,19 @@ section {
   padding-bottom: 15px;
 }
 
+.svc_main_out {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 90vh;
+}
+
 .svc {
   padding: 20px 30px;
   background-color: #3d5a80;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
   border: #88e7e7 1px solid;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .svc_out {
@@ -247,8 +250,24 @@ section {
           justify-content: center;
 }
 
+#secure {
+  width: 50%;
+}
+
+#geo {
+  min-height: 50%;
+}
+
 #analis {
-  max-width: 50%;
+  width: 50%;
+}
+
+#anAndConsult {
+  height: 50%;
+}
+
+#consult {
+  width: 50%;
 }
 
 #geoAndAn {
@@ -259,7 +278,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 50%;
+  width: 50%;
 }
 
 .how_to_start h2 {
@@ -467,6 +486,9 @@ form .but_send:active {
 
 #cases {
   background-color: red;
+  width: 100%;
+  height: 100vh;
+  max-width: unset;
 }
 
 footer {
@@ -604,18 +626,40 @@ footer nav {
 }
 
 @media (max-width: 980px) {
-  .services_samples {
-    grid-auto-rows: 130px;
+  .svc_main_out {
+    font-size: 14px;
+  }
+}
+@media (max-width: 900px) {
+  .svc_main_out {
+    height: 70vh;
+    font-size: 12px;
   }
 }
 @media (max-width: 800px) {
-  .services_samples {
-    grid-auto-rows: 180px;
+  #secure {
+    width: 45%;
+  }
+  #geoAndAn {
+    width: 55%;
+  }
+}
+@media (max-width: 750px) {
+  #analis p {
+    max-width: 100px;
   }
 }
 @media (max-width: 700px) {
-  .services_samples div {
-    font-size: 14px;
+  #analis {
+    width: 60%;
+  }
+  #consult {
+    width: 40%;
+  }
+}
+@media (max-width: 650px) {
+  .logos {
+    width: 30%;
   }
 }
 @media (max-width: 600px) {
@@ -643,13 +687,52 @@ footer nav {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  section {
+    padding: 30px;
+  }
+  #secure {
+    width: 30%;
+  }
+  #geoAndAn {
+    width: 70%;
+  }
+}
+@media (max-width: 530px) {
+  .svc_main_out {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #secure {
+    width: unset;
+  }
+  #geoAndAn {
+    width: unset;
+  }
+  #analis {
+    width: 50%;
+    padding: 20px 0;
+  }
+  #consult {
+    width: 50%;
+  }
 }
 @media (max-width: 480px) {
-  .services_samples div {
+  .logos {
+    width: 40%;
+  }
+  .services_samples {
     font-size: 12px;
   }
   .spotlight {
     display: none;
+  }
+  #hero {
+    background-color: black;
   }
   body {
     font-size: 14px;
@@ -666,8 +749,14 @@ footer nav {
             justify-content: center;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 380px) {
+  .container_headIn {
+    height: 50px;
+  }
   .logo_text {
     display: none;
+  }
+  .main_logo {
+    top: -10px;
   }
 }
