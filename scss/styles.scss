@@ -224,7 +224,7 @@ section {
     padding-bottom: 8px;
   }
 }
-form {
+.form_cont {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
@@ -305,7 +305,7 @@ form {
   p {
     padding-top: 20px;
   }
-  width: 30vw;
+  width: clamp(50px, 28vw, 450px);
   text-align: center;
   background-color: #3d5a80;
   padding: 20px 20px;
@@ -344,7 +344,7 @@ form {
 #cases {
   background-color: red;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   max-width: unset;
 }
 
@@ -374,17 +374,31 @@ footer {
   gap: 15px;
 }
 
-.but_contacts button {
-  background-color: #3d5a80;
-  color: white;
-  border: none;
-  padding: 0.8vw 1.6vw;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+.but_contacts {
+  button {
+    background-color: #3d5a80;
+    color: white;
+    border: none;
+    padding: 0.8vw 1.6vw;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  a {
+    background-color: #3d5a80;
+    color: white;
+    border: none;
+    padding: 0.8vw 1.6vw;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
 }
 
 /* Базовая анимация подсвечивания */
@@ -395,7 +409,7 @@ footer {
     box-shadow: 0 4px 12px rgba(61, 90, 128, 0.4),
       0 0 0 1px rgba(255, 255, 255, 0.1);
   }
-  .but_contacts button:nth-child(1):hover {
+  .but_contacts a:hover {
     background-color: #f98b63;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(247, 190, 104, 0.4),
@@ -420,9 +434,7 @@ footer {
   z-index: 80;
 }
 .popup {
-  border: 0;
-  border-radius: 20px;
-  padding: 0;
+  margin: auto;
   background: transparent;
   z-index: 90;
 }
@@ -432,7 +444,6 @@ footer {
 .popup .form {
   width: min(520px, 92vw);
   background: var(--blue);
-  border-radius: 20px;
   padding: 20px;
 }
 .form label {
@@ -457,6 +468,22 @@ footer {
 @media (max-width: 980px) {
   .svc_main_out {
     font-size: 14px;
+  }
+  .main_case_image {
+    display: none;
+  }
+  .main_case_part {
+    flex-direction: column;
+  }
+  .main_card {
+    order: 2;
+  }
+  .main_case_logo {
+    position: static;
+    order: 1;
+  }
+  .main_card {
+    width: 60vw;
   }
 }
 @media (max-width: 900px) {
@@ -548,6 +575,9 @@ footer {
   .spotlight {
     display: none;
   }
+  .hero__subtitle {
+    color: #223146;
+  }
   #hero {
     background-color: black;
   }
@@ -558,11 +588,10 @@ footer {
     font-size: 12px;
   }
   footer {
-    button {
-      display: none;
-    }
     nav {
       justify-content: center;
+      flex-direction: column;
+      row-gap: 10px;
     }
   }
 }
@@ -575,5 +604,8 @@ footer {
   }
   .main_logo {
     top: -10px;
+  }
+  #how_to_start {
+    padding-top: 150px;
   }
 }

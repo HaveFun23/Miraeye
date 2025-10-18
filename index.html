@@ -68,16 +68,25 @@
       <section id="services">
         <div class="services in">
           <h2 data-i18n="services_title">Услуги</h2>
-
           <div class="svc_main_out">
-            <button class="svc" data-i18n="svc_full" id="secure">
+            <button
+              class="svc"
+              data-i18n="svc_full"
+              id="secure"
+              data-open="service"
+            >
               <p>
                 Защита бренда под ключ — поиск и уничтожение конкурентов по всем
                 направлениям для наилучшего результата
               </p>
             </button>
             <div class="svc_out" id="geoAndAn">
-              <button data-i18n="svc_geo" class="svc" id="geo">
+              <button
+                data-i18n="svc_geo"
+                class="svc"
+                id="geo"
+                data-open="service"
+              >
                 <p>
                   Сопровождение на определенных гео — защищаем вас от
                   конкурентов в определенных странах
@@ -85,13 +94,23 @@
               </button>
 
               <div class="svc_out" id="anAndConsult">
-                <button data-i18n="svc_analysis" class="svc" id="analis">
+                <button
+                  data-i18n="svc_analysis"
+                  class="svc"
+                  id="analis"
+                  data-open="service"
+                >
                   <p>
                     Анализ брендового трафика для понимания стратегии борьбы с
                     недобросовестными конкурентами
                   </p>
                 </button>
-                <button data-i18n="svc_consult" class="svc" id="consult">
+                <button
+                  data-i18n="svc_consult"
+                  class="svc"
+                  id="consult"
+                  data-open="service"
+                >
                   <p>Консультации, касающиеся брендового трафика</p>
                 </button>
               </div>
@@ -116,7 +135,7 @@
               Шаг 4: приступаем, уничтожаем недобросовестных конкурентов.
             </p>
           </div>
-          <form data-form="contact">
+          <form data-form="contact" class="form_cont form">
             <h3 data-i18n="form_title">Свяжемся с вами</h3>
             <label>
               <span data-i18n="form_name">Имя</span>
@@ -276,14 +295,14 @@
           <a href="#cases" data-i18n="nav_cases">Кейсы</a>
         </div>
         <div class="but_contacts">
-          <button data-i18n="btn_tg">Написать в TG</button>
-          <button data-i18n="btn_audit">Консультация</button>
+          <a data-i18n="btn_tg" href="https://t.me/username"> Написать в TG </a>
+          <button data-i18n="btn_audit" data-open="audit">Аудит</button>
         </div>
       </nav>
     </footer>
     <div id="popup-overlay" class="overlay" hidden></div>
 
-    <dialog id="popup-audit" class="popup">
+    <dialog id="popup_audit" class="popup">
       <form method="dialog" class="form" data-form="audit">
         <h3 data-i18n="audit_title">Получить аудит</h3>
         <label>
@@ -303,7 +322,12 @@
           <input name="contact" required />
         </label>
         <menu>
-          <button class="btn" value="cancel" data-i18n="btn_cancel">
+          <button
+            class="btn"
+            value="cancel"
+            data-i18n="btn_cancel"
+            onclick="window.popup_audit.close()"
+          >
             Отмена
           </button>
           <button class="btn btn--primary" value="submit" data-i18n="form_send">
@@ -316,7 +340,7 @@
       </form>
     </dialog>
 
-    <dialog id="popup-service" class="popup">
+    <dialog id="popup_service" class="popup">
       <form method="dialog" class="form" data-form="service">
         <h3 id="svc-title">Service</h3>
         <label>
@@ -336,7 +360,12 @@
           <input name="contact" required />
         </label>
         <menu>
-          <button class="btn" value="cancel" data-i18n="btn_cancel">
+          <button
+            class="btn"
+            value="cancel"
+            data-i18n="btn_cancel"
+            onclick="window.popup_service.close()"
+          >
             Отмена
           </button>
           <button class="btn btn--primary" value="submit" data-i18n="form_send">
@@ -352,4 +381,6 @@
   <script src="./js/spotlight.js"></script>
   <script src="./js/cases.js"></script>
   <script src="./js/lang.js"></script>
+  <script src="./js/popup.js"></script>
+  <script src="./js/form.js"></script>
 </html>

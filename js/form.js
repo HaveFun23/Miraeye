@@ -1,5 +1,5 @@
-const BOT_TOKEN = "PASTE_TELEGRAM_BOT_TOKEN";
-const CHAT_ID = "PASTE_TELEGRAM_CHAT_ID";
+const BOT_TOKEN = "8452586263:AAEJ4AakVZPaTPD4R3nbHHHQ0WlUSAqi_VY";
+const CHAT_ID = "-4989108288";
 
 async function sendToTelegram(prefix, data) {
   const text = `${prefix}\nИмя: ${data.name}\nКанал: ${data.channel}\nКонтакт: ${data.contact}`;
@@ -31,5 +31,5 @@ function bindForm(selector, prefix) {
   });
 }
 bindForm('.form[data-form="contact"]', "ЛИД: форма 'Как начать'");
-bindForm('#popup-audit .form[data-form="audit"]', "ЛИД: Получить аудит");
-bindForm('#popup-service .form[data-form="service"]', "ЛИД: Услуга");
+bindForm('#popup_audit .form[data-form="audit"]', "ЛИД: Получить аудит");
+bindForm('#popup_service .form[data-form="service"]', "ЛИД: Услуга");
