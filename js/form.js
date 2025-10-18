@@ -20,7 +20,14 @@ function bindForm(selector, prefix) {
     const fd = new FormData(form);
     const data = Object.fromEntries(fd.entries());
     try {
-      const ok = await sendToTelegram(prefix, data);
+      let ok;
+      if (form.querySelector("#svc_title") != null) {
+        const title_for_sample = form.querySelector("#svc_title");
+        ok = await sendToTelegram(prefix + title_for_sample.innerText, data);
+      } else {
+        ok = await sendToTelegram(prefix, data);
+      }
+
       if (ok) {
         form.querySelector(".form__ok").hidden = false;
         form.reset();
@@ -32,4 +39,4 @@ function bindForm(selector, prefix) {
 }
 bindForm('.form[data-form="contact"]', "ЛИД: форма 'Как начать'");
 bindForm('#popup_audit .form[data-form="audit"]', "ЛИД: Получить аудит");
-bindForm('#popup_service .form[data-form="service"]', "ЛИД: Услуга");
+bindForm('#popup_service .form[data-form="service"]', "ЛИД: Услуга:");

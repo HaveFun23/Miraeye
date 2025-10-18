@@ -74,6 +74,7 @@
               data-i18n="svc_full"
               id="secure"
               data-open="service"
+              data-service="full"
             >
               <p>
                 Защита бренда под ключ — поиск и уничтожение конкурентов по всем
@@ -86,6 +87,7 @@
                 class="svc"
                 id="geo"
                 data-open="service"
+                data-service="geo"
               >
                 <p>
                   Сопровождение на определенных гео — защищаем вас от
@@ -99,6 +101,7 @@
                   class="svc"
                   id="analis"
                   data-open="service"
+                  data-service="analysis"
                 >
                   <p>
                     Анализ брендового трафика для понимания стратегии борьбы с
@@ -110,6 +113,7 @@
                   class="svc"
                   id="consult"
                   data-open="service"
+                  data-service="consult"
                 >
                   <p>Консультации, касающиеся брендового трафика</p>
                 </button>
@@ -342,7 +346,7 @@
 
     <dialog id="popup_service" class="popup">
       <form method="dialog" class="form" data-form="service">
-        <h3 id="svc-title">Service</h3>
+        <h3 id="svc_title">Service</h3>
         <label>
           <span data-i18n="form_name">Имя</span>
           <input name="name" required />

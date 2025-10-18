@@ -16,8 +16,7 @@ document.querySelectorAll("[data-open='audit']").forEach((el) => {
 });
 document.querySelectorAll("[data-open='service']").forEach((el) => {
   el.addEventListener("click", (e) => {
-    const svc = e.currentTarget.getAttribute("data-service");
-    const title = document.getElementById("svc-title");
+    const title = document.getElementById("svc_title");
     title.innerText = el.innerHTML;
     openDialog(dlgService);
   });
