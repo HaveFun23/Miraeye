@@ -422,7 +422,7 @@ section {
 }
 
 .main_card {
-  width: clamp(50px, 28vw, 450px);
+  width: clamp(50px, 28vw, 400px);
   text-align: center;
   background-color: #3d5a80;
   padding: 20px 20px;
@@ -435,6 +435,7 @@ section {
   position: absolute;
   left: 0;
   max-width: 35%;
+  top: -20px;
 }
 
 #pic1,
