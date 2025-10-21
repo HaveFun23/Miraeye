@@ -176,9 +176,9 @@ section {
 }
 .svc {
   padding: 20px 30px;
-  background-color: #3d5a80;
+  background-color: black;
   transition: all 0.5s linear;
-  border: #88e7e7 1px solid;
+  border: #ff6933 1px solid;
 }
 .svc_out {
   display: flex;
@@ -228,7 +228,8 @@ section {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
-  background-color: #3d5a80;
+  background-color: black;
+  border: 1px solid #ff6933;
   padding: 30px 18px;
   justify-content: center;
   h3 {
@@ -307,7 +308,8 @@ section {
   }
   width: clamp(50px, 28vw, 400px);
   text-align: center;
-  background-color: #3d5a80;
+  background-color: black;
+  border: 1px solid #ff6933;
   padding: 20px 20px;
 }
 .main_case_image {
