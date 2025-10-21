@@ -177,8 +177,13 @@ section {
 .svc {
   padding: 20px 30px;
   background-color: black;
-  transition: all 0.5s linear;
   border: #ff6933 1px solid;
+}
+@media (hover: hover) {
+  .svc:hover {
+    border: #ff875b 3px solid;
+    background-color: rgb(42, 42, 42);
+  }
 }
 .svc_out {
   display: flex;
