@@ -1,5 +1,5 @@
-const BOT_TOKEN = "8452586263:AAEJ4AakVZPaTPD4R3nbHHHQ0WlUSAqi_VY";
-const CHAT_ID = "-4989108288";
+const BOT_TOKEN = "8210502564:AAHCKvky-9m6ONR5zO4YdVzDUJ07OQMdTr4";
+const CHAT_ID = "-4805470222";
 
 async function sendToTelegram(prefix, data) {
   const text = `${prefix}\nИмя: ${data.name}\nКанал: ${data.channel}\nКонтакт: ${data.contact}`;
