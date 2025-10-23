@@ -170,9 +170,12 @@ section {
   }
 }
 .svc_main_out {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 50% 50%;
   height: 30vw;
   max-height: 500px;
+  font-size: clamp(18px, 1.653vw, 27px);
 }
 .svc {
   padding: 20px 30px;
@@ -182,7 +185,6 @@ section {
 @media (hover: hover) {
   .svc:hover {
     border: #ff875b 3px solid;
-    background-color: rgb(42, 42, 42);
   }
 }
 .svc_out {
@@ -190,24 +192,18 @@ section {
   justify-content: center;
 }
 #secure {
-  width: 50%;
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 2;
 }
 #geo {
-  min-height: 50%;
+  grid-column: 3 / span 4;
 }
 #analis {
-  width: 50%;
-}
-#anAndConsult {
-  height: 50%;
+  grid-row-start: 2;
 }
 #consult {
-  width: 50%;
-}
-#geoAndAn {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
+  grid-column-start: 4;
+  grid-row-start: 2;
 }
 .how_to_start {
   h2 {
@@ -474,9 +470,18 @@ footer {
   color: #c0ffd6;
   font-weight: 700;
 }
-
-@media (max-width: 980px) {
-  .svc_main_out {
+@media (max-width: 1390px) {
+  #analis {
+    font-size: 19px;
+  }
+}
+@media (max-width: 1240px) {
+  #analis {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1031px) {
+  #analis {
     font-size: 14px;
   }
   .main_case_image {
@@ -498,39 +503,41 @@ footer {
 }
 @media (max-width: 900px) {
   .svc_main_out {
-    height: 40vw;
-    font-size: 12px;
+    font-size: 16px;
+    height: 45vw;
   }
-}
-@media (max-width: 800px) {
-  #secure {
-    width: 45%;
-  }
-  #geoAndAn {
-    width: 55%;
-  }
-}
-@media (max-width: 750px) {
   #analis {
-    p {
-      max-width: 100px;
-    }
-    width: 60%;
+    font-size: 13px;
   }
-  #consult {
-    width: 40%;
-  }
+}
+
+@media (max-width: 750px) {
   section {
     padding: 30px;
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 730px) {
+  .svc_main_out {
+    height: 55vw;
+    grid-template-columns: 22% 22% 28% 28%;
+  }
   .logos {
     width: 30%;
   }
 }
 @media (max-width: 600px) {
+  .svc_main_out {
+    display: flex;
+    flex-direction: column;
+    height: unset;
+  }
+  #secure {
+    height: 28vw;
+  }
+  #geo {
+    height: 20vw;
+  }
   .logos {
     column-gap: 5px;
   }
@@ -546,33 +553,6 @@ footer {
   .how_form {
     display: flex;
     flex-direction: column;
-  }
-
-  #secure {
-    width: 30%;
-  }
-  #geoAndAn {
-    width: 70%;
-  }
-}
-@media (max-width: 530px) {
-  .svc_main_out {
-    flex-direction: column;
-    align-items: center;
-    height: 65vw;
-  }
-  #secure {
-    width: unset;
-  }
-  #geoAndAn {
-    width: unset;
-  }
-  #analis {
-    width: 50%;
-    padding: 20px 0;
-  }
-  #consult {
-    width: 50%;
   }
 }
 @media (max-width: 480px) {
@@ -616,6 +596,14 @@ footer {
     top: -10px;
   }
   #how_to_start {
-    padding-top: 150px;
+    padding-top: 40px;
+  }
+}
+@media (max-width: 340px) {
+  #secure {
+    height: 40vw;
+  }
+  #geo {
+    height: 30vw;
   }
 }
